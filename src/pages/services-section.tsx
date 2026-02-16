@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Card,
   CardContent,
@@ -10,11 +12,11 @@ import { motion } from "motion/react";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { services } from "@/api/data";
 import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
-import {useState} from "react";
+import { useState } from "react";
 import { useActiveSection } from "@/hook/useActiveSection";
 
 export function ServicesSection() {
-const {ref}=useActiveSection("Service",0.5)
+  const { ref } = useActiveSection("Service", 0.5)
   return (
     <section ref={ref} id="service" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -74,9 +76,8 @@ const CollapsibleComponent = ({
 
   return (
     <Card
-      className={`group hover:shadow-lg transition-all duration-300 border-border bg-card h-full relative ${
-        popular ? "ring-2 ring-accent/20" : ""
-      }`}
+      className={`group hover:shadow-lg transition-all duration-300 border-border bg-card h-full relative ${popular ? "ring-2 ring-accent/20" : ""
+        }`}
     >
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">

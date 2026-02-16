@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
@@ -6,17 +8,22 @@ import { useAppSelector } from "@/hook/hook";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const AcitveSection=useAppSelector(state=>state.active_section.active)
+  const AcitveSection = useAppSelector(state => state.active_section.active)
   const navItems = [
-    { name: "About", href: "/#about" },
-    { name: "Experience", href: "/#experience" },
-    { name: "Service", href: "/#service" },
-    { name: "Projects", href: "/#projects" },
-    { name: "Personal", href: "/#personal" },
-    { name: "Skills", href: "/#skills" },
-    { name: "Contact", href: "/#contact" },
+    { name: "About", href: "about" },
+    { name: "Experience", href: "experience" },
+    { name: "Services", href: "service" },
+    { name: "Projects", href: "projects" },
+    { name: "Personal", href: "personal" },
+    { name: "Skills", href: "skills" },
+    { name: "Contact", href: "contact" },
   ];
-
+  const ScrollIntoView=(href:string)=>{
+    const element=document.getElementById(href)
+    if(element){
+      element.scrollIntoView({behavior:"smooth"})
+    }
+  }
   return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
@@ -38,16 +45,18 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <motion.a
+              console.log(item.href),
+              <motion.span
                 key={item.name}
+                onClick={() => ScrollIntoView(item.href)}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-                href={item.href}
-                className={`${AcitveSection===item.name? "text-accent" : "text-muted-foreground"} hover:text-foreground transition-colors duration-200`}
+                // href={item.href}
+                className={`${AcitveSection === item.name ? "text-accent" : "text-muted-foreground"} hover:text-foreground transition-colors duration-200 cursor-pointer`}
               >
                 {item.name}
-              </motion.a>
+              </motion.span>
             ))}
           </div>
 
@@ -112,7 +121,7 @@ export function Navigation() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`${AcitveSection===item.name? "text-accent" : "text-muted-foreground"} block  hover:text-foreground transition-colors duration-200 py-2`}
+                  className={`${AcitveSection === item.name ? "text-accent" : "text-muted-foreground"} block  hover:text-foreground transition-colors duration-200 py-2`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

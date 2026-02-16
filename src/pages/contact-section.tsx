@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Card,
   CardContent,
@@ -81,7 +83,7 @@ export function ContactSection() {
   const { ref } = useActiveSection("Contact", 0.5);
 
   return (
-    <section id="contact" ref={ref} className="py-20 bg-muted/30">
+    <section id="contact" ref={ref} className="py-20 bg-muted/30 max-w-screen overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -98,7 +100,7 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-screen mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -118,7 +120,7 @@ export function ContactSection() {
             </div>
 
             <div className="space-y-6">
-            <motion.div
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -160,7 +162,7 @@ export function ContactSection() {
                 viewport={{ once: true }}
                 className="flex items-center justify-start w-[90%] md:w-[70%]  gap-4"
               >
-                
+
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                   <Phone className="w-5 h-5 text-accent" />
                 </div>
@@ -168,7 +170,7 @@ export function ContactSection() {
                   <h4 className="font-medium text-foreground">Phone</h4>
                   <p className="text-muted-foreground">+971 563 130 278</p>
                 </div>
-              
+
                 <Button variant={"ghost"} className="bg-accent/5 ml-auto rounded-lg">
                   <a href="tel:+971563130278">
                     <PhoneOutgoing className="w-5 h-5" />
@@ -197,7 +199,7 @@ export function ContactSection() {
                   </a>
                 </Button>
               </motion.div>
-              
+
             </div>
           </motion.div>
 

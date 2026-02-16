@@ -1,3 +1,5 @@
+// import { experiences } from '@/api/data';
+// import { experiences } from '@/api/data';
 import {
   Code2,
   Database,
@@ -144,34 +146,39 @@ export const activities = [
 
 export const experiences = [
   {
-    title: "Junior Full Stack Developer",
-    company: "Self-Employed",
-    location: "Bangkok",
-    period: "2025 - Present",
+    title: "Full-Stack Developer",
+    company: "House & Hedges Real Estate",
+    location: "Dubai, UAE",
+    period: "September 2025 – Present",
     type: "work",
     icon: BriefcaseBusiness,
     description:
-      "Focused on building personal projects to strengthen full-stack development expertise, applying modern web technologies in real-world scenarios.",
+      "Architected and deployed a custom real estate platform, replacing a legacy WordPress system with a scalable, high-performance full-stack solution.",
     achievements: [
-      "Built personal projects that demonstrated practical application of full-stack development skills",
-      "Practiced TypeScript integration across both frontend and backend",
-      "Explored AI tools and packages to enhance productivity",
-      "Strengthened knowledge in CRUD operations, API consumption, and application architecture",
+      "Architected and launched a custom real estate platform replacing a legacy WordPress system",
+      "Designed full-stack architecture using React, TypeScript, Node.js, and PostgreSQL",
+      "Executed full data migration including structured property data, blog content, and media assets",
+      "Improved performance through code refactoring, caching strategies, and server-level tuning",
+      "Implemented technical SEO including structured data, sitemap automation, and metadata optimization",
+      "Containerized applications using Docker and configured Nginx reverse proxy for production deployment",
+      "Built CI/CD pipelines with GitHub Actions for automated builds and deployments",
+      "Managed Linux VPS infrastructure including DNS configuration, SSL certificates, and release cycles",
     ],
   },
   {
-    title: "IT Assistant",
+    title: "IT Support & Technical Assistant",
     company: "JM505 Computer Sales & Services",
-    location: "Bangkok",
+    location: "Bangkok, Thailand",
     period: "May 2024 - Dec 2024",
     type: "work",
     icon: BriefcaseBusiness,
     description:
-      "Assisted in providing technical support, hardware maintenance, and customer service for a computer sales and services business.",
+      "Delivered technical support and hardware maintenance services while assisting customers and supporting retail operations in a computer sales and service environment.",
     achievements: [
-      "Provided technical support for computer hardware and software issues",
-      "Performed computer repairs, upgrades, and hardware diagnostics",
-      "Supported sales operations and assisted with packaging of computer accessories",
+      "Diagnosed and resolved hardware and software issues for customers",
+      "Performed system repairs, upgrades, and performance optimization",
+      "Provided technical consultation and after-sales support",
+      "Supported inventory handling and packaging of computer components and accessories",
     ],
   },
   {
@@ -182,44 +189,126 @@ export const experiences = [
     type: "work",
     icon: BriefcaseBusiness,
     description:
-      "Contributed to the development of web and mobile applications by building responsive dashboards, developing RESTful APIs, and collaborating with cross-functional teams in an agile environment.",
+      "Developed responsive web interfaces and supported backend integration for web and mobile applications in an agile development environment.",
     achievements: [
-      "Developed RESTful APIs using Express.js to support mobile application features",
-      "Created responsive dashboards with React.js and Tailwind CSS",
-      "Collaborated with designers to implement clean and accessible UI components",
-      "Actively participated in sprint planning, daily standups, and code reviews",
+      "Built responsive dashboards using React.js and Tailwind CSS",
+      "Integrated RESTful APIs to support mobile and web application features",
+      "Collaborated with designers to deliver clean, accessible UI components",
+      "Participated in sprint planning, stand-ups, and peer code reviews",
     ],
   },
   {
-    title: "Professional Web Developer Course",
-    company: "Fairway technology",
-    location: "Yangon",
+    title: "Professional Web Developer Program",
+    company: "Fairway Technology",
+    location: "Yangon, Myanmar",
     period: "2020 - 2021",
     type: "education",
     icon: GraduationCap,
     description:
-      "Production-applied course focused on MERN stack technologies, covering HTML, CSS, Bootstrap, React, Node.js, related packages, and practical projects.",
+      "Intensive hands-on training focused on modern web development using the MERN stack and real-world project workflows.",
     achievements: [
-      "Gained hands-on experience with real-life web development workflows",
+      "Developed full-stack projects using React, Node.js, and MongoDB",
+      "Learned modern frontend design and responsive layout techniques",
+      "Practiced real-world development workflows and deployment fundamentals",
     ],
   },
   {
-    title: "Computer Science Degree(Undergraduate)",
+    title: "Bachelor of Computer Science (Undergraduate)",
     company: "University of Computer Studies",
-    location: "Monywa",
+    location: "Monywa, Myanmar",
     period: "2015 - 2019",
     type: "education",
     icon: GraduationCap,
     description:
-      "Bachelor's degree in Computer Science with focus on software engineering and web technologies.",
+      "Studied computer science fundamentals with emphasis on software engineering, programming, and database systems.",
     achievements: [
-      "Studied OOP and various programming languages",
-      "Learned fundamental web development",
-      "Learned Software development life-cycle, Database management system, Software engineering ",
-      "Practical A+ certification course",
+      "Learned object-oriented programming and multiple programming languages",
+      "Studied database systems and software development lifecycle",
+      "Built foundational knowledge in web development technologies",
+      "Completed practical A+ hardware certification training",
     ],
   },
 ];
+
+
+// export const experiences = [
+//   {
+//     title: "Junior Full Stack Developer",
+//     company: "Self-Employed",
+//     location: "Bangkok",
+//     period: "2025 - Present",
+//     type: "work",
+//     icon: BriefcaseBusiness,
+//     description:
+//       "Focused on building personal projects to strengthen full-stack development expertise, applying modern web technologies in real-world scenarios.",
+//     achievements: [
+//       "Built personal projects that demonstrated practical application of full-stack development skills",
+//       "Practiced TypeScript integration across both frontend and backend",
+//       "Explored AI tools and packages to enhance productivity",
+//       "Strengthened knowledge in CRUD operations, API consumption, and application architecture",
+//     ],
+//   },
+//   {
+//     title: "IT Assistant",
+//     company: "JM505 Computer Sales & Services",
+//     location: "Bangkok",
+//     period: "May 2024 - Dec 2024",
+//     type: "work",
+//     icon: BriefcaseBusiness,
+//     description:
+//       "Assisted in providing technical support, hardware maintenance, and customer service for a computer sales and services business.",
+//     achievements: [
+//       "Provided technical support for computer hardware and software issues",
+//       "Performed computer repairs, upgrades, and hardware diagnostics",
+//       "Supported sales operations and assisted with packaging of computer accessories",
+//     ],
+//   },
+//   {
+//     title: "Frontend Developer",
+//     company: "Promes MM",
+//     location: "Yangon, MICT Park",
+//     period: "May 2023 - Nov 2023",
+//     type: "work",
+//     icon: BriefcaseBusiness,
+//     description:
+//       "Contributed to the development of web and mobile applications by building responsive dashboards, developing RESTful APIs, and collaborating with cross-functional teams in an agile environment.",
+//     achievements: [
+//       "Developed RESTful APIs using Express.js to support mobile application features",
+//       "Created responsive dashboards with React.js and Tailwind CSS",
+//       "Collaborated with designers to implement clean and accessible UI components",
+//       "Actively participated in sprint planning, daily standups, and code reviews",
+//     ],
+//   },
+//   {
+//     title: "Professional Web Developer Course",
+//     company: "Fairway technology",
+//     location: "Yangon",
+//     period: "2020 - 2021",
+//     type: "education",
+//     icon: GraduationCap,
+//     description:
+//       "Production-applied course focused on MERN stack technologies, covering HTML, CSS, Bootstrap, React, Node.js, related packages, and practical projects.",
+//     achievements: [
+//       "Gained hands-on experience with real-life web development workflows",
+//     ],
+//   },
+//   {
+//     title: "Computer Science Degree(Undergraduate)",
+//     company: "University of Computer Studies",
+//     location: "Monywa",
+//     period: "2015 - 2019",
+//     type: "education",
+//     icon: GraduationCap,
+//     description:
+//       "Bachelor's degree in Computer Science with focus on software engineering and web technologies.",
+//     achievements: [
+//       "Studied OOP and various programming languages",
+//       "Learned fundamental web development",
+//       "Learned Software development life-cycle, Database management system, Software engineering ",
+//       "Practical A+ certification course",
+//     ],
+//   },
+// ];
 export const services = [
   {
     icon: Database,

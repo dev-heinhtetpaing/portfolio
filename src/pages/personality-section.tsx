@@ -1,13 +1,14 @@
+'use client'
 
 import { motion } from "motion/react"
 import { Code2 } from "lucide-react"
-import { interests,values } from "@/api/data"
+import { interests, values } from "@/api/data"
 import { useActiveSection } from "@/hook/useActiveSection"
 export function PersonalitySection() {
-  
-const {ref}=useActiveSection("Personal",0.3)
+
+  const { ref } = useActiveSection("Personal", 0.3)
   return (
-    <section ref={ref} id="personal" className="py-20 bg-muted/30 ">
+    <section ref={ref} id="personal" className="py-20 bg-muted/30 max-w-screen overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,0 +1,26 @@
+import { AboutSection } from "@/pages/about-section"
+import { ContactSection } from "@/pages/contact-section"
+import { ExperienceSection } from "@/pages/experience-section"
+import { HeroSection } from "@/pages/hero-section"
+import { PersonalitySection } from "@/pages/personality-section"
+import { ProjectsSection } from "@/pages/projects-section"
+import { ServicesSection } from "@/pages/services-section"
+import Skills from "@/pages/skill-section"
+
+export default function Home() {
+    return (
+        <>
+           {/* <div className="relative min-h-screen h-screen w-screen ">  */}
+            <HeroSection />
+            <AboutSection />
+            <PersonalitySection />
+            <Skills />
+            <ServicesSection />
+            <ExperienceSection />
+            <ProjectsSection />
+            <ContactSection />
+            {/* </div>  */}
+        </>
+    )
+}
+

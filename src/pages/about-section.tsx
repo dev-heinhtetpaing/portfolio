@@ -1,29 +1,32 @@
+'use client'
+
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "motion/react";
-import { Code, Database, Globe } from "lucide-react";
+import { Code, Database, Globe, Server } from "lucide-react";
 import { useActiveSection } from "@/hook/useActiveSection";
 
 const skills = [
-  { name: "TypeScript", level: 80, icon: Code },
+  { name: "TypeScript", level: 82, icon: Code },
   { name: "React", level: 92, icon: Globe },
+  { name: "Next", level: 80, icon: Server },
   { name: "Node.js", level: 85, icon: Database },
 ];
 
 const codeSnippet = `const developer = {
   name: "Hein Htet Paing",
   role: "Full Stack Developer",
-  skills: ["TypeScript", "React", "Node.js"],
+  skills: ["TypeScript", "React", "Next", "Node.js"],
   passion: "Building amazing web experiences",
   currentFocus: "Modern web architecture"
 };`;
 
 export function AboutSection() {
 
-const {ref}=useActiveSection("About",0.5)
+  const { ref } = useActiveSection("About", 0.5)
 
   return (
-    <section id="about" ref={ref} className="py-20 bg-muted/30">
+    <section id="about" ref={ref} className="py-20 bg-muted/30 max-w-screen overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -124,13 +127,14 @@ const {ref}=useActiveSection("About",0.5)
               {[
                 "TypeScript",
                 "React",
+                "Next",
                 "Node.js",
                 "Tailwind",
                 "Shadcn/UI",
                 "Prisma",
                 "MongoDb",
               ].map((tech) => (
-                <motion.span>
+                <motion.div key={tech}>
                   <Badge
                     key={tech}
                     variant="secondary"
@@ -138,7 +142,7 @@ const {ref}=useActiveSection("About",0.5)
                   >
                     {tech}
                   </Badge>
-                </motion.span>
+                </motion.div>
               ))}
             </div>
           </motion.div>

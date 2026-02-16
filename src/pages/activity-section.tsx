@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "motion/react"
@@ -71,8 +73,8 @@ export function ActivitySection() {
                         <ul className="space-y-1">
                           {exp.achievements.map((achievement, i) => (
                             <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                              {<achievement.Icon className="text-accent flex-shrink-0"/>}
-                              { achievement.value}
+                              {<achievement.Icon className="text-accent flex-shrink-0" />}
+                              {achievement.value}
                             </li>
                           ))}
                         </ul>
