@@ -9,8 +9,7 @@ import { projects } from "@/api/data"
 import { useActiveSection } from "@/hook/useActiveSection"
 
 export function ProjectsSection() {
-
-const {ref}=useActiveSection("Projects",0.5)
+  const { ref } = useActiveSection("Projects", 0.5)
 
   return (
     <section id="projects" ref={ref} className="py-20 bg-background">
@@ -52,7 +51,7 @@ const {ref}=useActiveSection("Projects",0.5)
                     <CardTitle className="text-foreground group-hover:text-accent transition-colors">
                       {project.title}
                     </CardTitle>
-                    <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
+                    <CardDescription className="text-muted-foreground line-clamp-2 overflow-hidden leading-relaxed">{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -63,12 +62,12 @@ const {ref}=useActiveSection("Projects",0.5)
                       ))}
                     </div>
                     <div className="flex gap-3">
-                      <Button onClick={()=>location.assign(project.github)} variant="outline" size="sm" className="group/btn bg-transparent">
+                      <Button onClick={() => location.assign(project.github)} variant="outline" size="sm" className="group/btn bg-transparent">
                         <Github className="w-4 h-4 mr-2" />
                         Code
                         <ExternalLink className="w-3 h-3 ml-1 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                       </Button>
-                      <Button onClick={()=>location.assign(project.demo)} size="sm" className="group/btn">
+                      <Button onClick={() => location.assign(project.demo)} size="sm" className="group/btn">
                         <span className="mr-2">Demo</span>
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
@@ -106,10 +105,10 @@ const {ref}=useActiveSection("Projects",0.5)
                       ))}
                     </div>
                     <div className="flex gap-2">
-                      <Button variant="ghost" size="sm" className="p-2">
+                      <Button onClick={() => location.assign(project.github)} variant="ghost" size="sm" className="p-2">
                         <Github className="w-4 h-4" />
                       </Button>
-                      <Button variant="ghost" size="sm" className="p-2">
+                      <Button onClick={() => location.assign(project.demo)} variant="ghost" size="sm" className="p-2">
                         <ExternalLink className="w-4 h-4" />
                       </Button>
                     </div>

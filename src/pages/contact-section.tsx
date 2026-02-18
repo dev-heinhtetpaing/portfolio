@@ -133,7 +133,7 @@ export function ContactSection() {
                 <div>
                   <h4 className="font-medium text-foreground">Location</h4>
                   <p className="text-muted-foreground">
-                    Shajah, United Arab Emirates
+                    Dubai, United Arab Emirates
                   </p>
                 </div>
               </motion.div>
@@ -162,13 +162,12 @@ export function ContactSection() {
                 viewport={{ once: true }}
                 className="flex items-center justify-start w-[90%] md:w-[70%]  gap-4"
               >
-
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                   <Phone className="w-5 h-5 text-accent" />
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground">Phone</h4>
-                  <p className="text-muted-foreground">+971 563 130 278</p>
+                  <p className="text-muted-foreground">+971 507 900 425</p>
                 </div>
 
                 <Button variant={"ghost"} className="bg-accent/5 ml-auto rounded-lg">
@@ -192,7 +191,7 @@ export function ContactSection() {
                 </div>
                 <Button variant={"ghost"} className="bg-accent/5 ml-auto rounded-lg">
                   <a
-                    href="/files/Hein Htet Paing - Web Developer.pdf"
+                    href="/files/Hein Htet Paing - Full Stack Developer.pdf"
                     download={true}
                   >
                     <Download className="w-5 h-5 " />

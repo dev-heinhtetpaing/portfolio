@@ -39,7 +39,6 @@ export function ExperienceSection() {
 
         <div className="w-full mx-auto">
           <div className="relative ">
-            {/* Timeline line */}
             <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-border " />
             <div className="space-y-8 w-full ">
               {experiences.map((exp, index) => {
@@ -48,7 +47,6 @@ export function ExperienceSection() {
                     key={index}
                     className="w-full relative group "
                   >
-                    {/* Timeline dot */}
                     <Badge className="absolute left-8  md:left-1/2 z-10 -translate-x-1/2 top-0 md:-translate-y-1/2 md:top-1/2  w-15 h-15 bg-accent  rounded-full shadow-md  border-3 border-white-200">
                       <motion.span
                         initial={{ opacity: 0, scale: 0.5 }}
@@ -80,7 +78,6 @@ export function ExperienceSection() {
                           <CardHeader>
                             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                               <CardTitle className="text-foreground flex items-center gap-2">
-                                {" "}
                                 {exp.type === "work" ? (
                                   <Building2 size={32} className=" text-accent" />
                                 ) : (
@@ -121,14 +118,15 @@ export function ExperienceSection() {
                                     key={i}
                                     className="text-sm text-muted-foreground flex items-start gap-2"
                                   >
-                                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0 leading-relaxed" />
                                     {achievement}
                                   </li>
                                 ))}
                               </ul>
                             </div>
                           </CardContent>
-                        </Card></motion.span>
+                        </Card>
+                      </motion.span>
                     </div>
                   </div>
                 );

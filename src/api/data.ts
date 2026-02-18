@@ -1,5 +1,3 @@
-// import { experiences } from '@/api/data';
-// import { experiences } from '@/api/data';
 import {
   Code2,
   Database,
@@ -15,28 +13,31 @@ import {
 
 export const skills = [
   "TypeScript",
+  "JavaScript",
   "React",
-  "Node.js",
-  "Express",
-  "Shadcn/ui",
+  "Shadcn UI",
   "Tailwind CSS",
-  "Redux",
-  "React Query",
-  "Prisma",
+  "Redux Toolkit",
+  "TanStack Query (React Query)",
+  "Framer Motion",
+  "Node.js",
+  "Express.js",
+  "REST API Development",
+  "WebSockets (Socket.IO)",
   "MongoDB",
-  "SQLite",
   "PostgreSQL",
+  "SQLite",
+  "Prisma ORM",
   "Zod",
-  "React-hook-form",
-  "WebSocket",
-  "Git",
-  "Postman",
-  "API",
-  "Motion",
-  "PM2",
+  "React Hook Form",
+  "Docker",
   "Nginx",
-  "EC2",
-  "S3",
+  "PM2",
+  "AWS EC2",
+  "AWS S3",
+  "Git & GitHub",
+  "Postman",
+  "Linux Server Management",
 ];
 
 export const activities = [
@@ -155,15 +156,19 @@ export const experiences = [
     description:
       "Architected and deployed a custom real estate platform, replacing a legacy WordPress system with a scalable, high-performance full-stack solution.",
     achievements: [
-      "Architected and launched a custom real estate platform replacing a legacy WordPress system",
-      "Designed full-stack architecture using React, TypeScript, Node.js, and PostgreSQL",
-      "Executed full data migration including structured property data, blog content, and media assets",
-      "Improved performance through code refactoring, caching strategies, and server-level tuning",
-      "Implemented technical SEO including structured data, sitemap automation, and metadata optimization",
-      "Containerized applications using Docker and configured Nginx reverse proxy for production deployment",
-      "Built CI/CD pipelines with GitHub Actions for automated builds and deployments",
-      "Managed Linux VPS infrastructure including DNS configuration, SSL certificates, and release cycles",
-    ],
+        "Architected and launched a custom real estate platform replacing a legacy WordPress system, delivering a modern UI/UX that significantly improved usability and user engagement.",
+        "Redesigned user experience and navigation flow, resulting in a cleaner interface and faster interactions compared to the previous WordPress site.",
+        "Designed full-stack architecture using React, TypeScript, Node.js, and PostgreSQL to ensure scalability and long-term maintainability.",
+        "Executed complete data migration of structured property listings, blog content, and media assets with zero data loss.",
+        "Improved SEO performance by 25%, increasing page indexing coverage and search ranking visibility through technical SEO enhancements.",
+        "Implemented structured data, automated sitemap generation, and metadata optimization to strengthen search engine discoverability.",
+        "Built conversion-focused landing pages that improved user engagement and increased lead generation by 35%.",
+        "Enhanced performance through code refactoring, caching strategies, and server-level optimization for faster load times.",
+        "Containerized applications using Docker and configured Nginx reverse proxy for secure, production-grade deployment.",
+        "Built CI/CD pipelines with GitHub Actions to automate testing, builds, and deployments.",
+        "Managed Linux VPS infrastructure including DNS configuration, SSL certificates, monitoring, and release cycles.",
+      ]
+      
   },
   {
     title: "IT Support & Technical Assistant",
@@ -230,97 +235,19 @@ export const experiences = [
   },
 ];
 
-
-// export const experiences = [
-//   {
-//     title: "Junior Full Stack Developer",
-//     company: "Self-Employed",
-//     location: "Bangkok",
-//     period: "2025 - Present",
-//     type: "work",
-//     icon: BriefcaseBusiness,
-//     description:
-//       "Focused on building personal projects to strengthen full-stack development expertise, applying modern web technologies in real-world scenarios.",
-//     achievements: [
-//       "Built personal projects that demonstrated practical application of full-stack development skills",
-//       "Practiced TypeScript integration across both frontend and backend",
-//       "Explored AI tools and packages to enhance productivity",
-//       "Strengthened knowledge in CRUD operations, API consumption, and application architecture",
-//     ],
-//   },
-//   {
-//     title: "IT Assistant",
-//     company: "JM505 Computer Sales & Services",
-//     location: "Bangkok",
-//     period: "May 2024 - Dec 2024",
-//     type: "work",
-//     icon: BriefcaseBusiness,
-//     description:
-//       "Assisted in providing technical support, hardware maintenance, and customer service for a computer sales and services business.",
-//     achievements: [
-//       "Provided technical support for computer hardware and software issues",
-//       "Performed computer repairs, upgrades, and hardware diagnostics",
-//       "Supported sales operations and assisted with packaging of computer accessories",
-//     ],
-//   },
-//   {
-//     title: "Frontend Developer",
-//     company: "Promes MM",
-//     location: "Yangon, MICT Park",
-//     period: "May 2023 - Nov 2023",
-//     type: "work",
-//     icon: BriefcaseBusiness,
-//     description:
-//       "Contributed to the development of web and mobile applications by building responsive dashboards, developing RESTful APIs, and collaborating with cross-functional teams in an agile environment.",
-//     achievements: [
-//       "Developed RESTful APIs using Express.js to support mobile application features",
-//       "Created responsive dashboards with React.js and Tailwind CSS",
-//       "Collaborated with designers to implement clean and accessible UI components",
-//       "Actively participated in sprint planning, daily standups, and code reviews",
-//     ],
-//   },
-//   {
-//     title: "Professional Web Developer Course",
-//     company: "Fairway technology",
-//     location: "Yangon",
-//     period: "2020 - 2021",
-//     type: "education",
-//     icon: GraduationCap,
-//     description:
-//       "Production-applied course focused on MERN stack technologies, covering HTML, CSS, Bootstrap, React, Node.js, related packages, and practical projects.",
-//     achievements: [
-//       "Gained hands-on experience with real-life web development workflows",
-//     ],
-//   },
-//   {
-//     title: "Computer Science Degree(Undergraduate)",
-//     company: "University of Computer Studies",
-//     location: "Monywa",
-//     period: "2015 - 2019",
-//     type: "education",
-//     icon: GraduationCap,
-//     description:
-//       "Bachelor's degree in Computer Science with focus on software engineering and web technologies.",
-//     achievements: [
-//       "Studied OOP and various programming languages",
-//       "Learned fundamental web development",
-//       "Learned Software development life-cycle, Database management system, Software engineering ",
-//       "Practical A+ certification course",
-//     ],
-//   },
-// ];
 export const services = [
   {
     icon: Database,
     title: "Backend Development",
     description:
-      "Scalable server-side solutions with robust APIs, databases, and cloud integrations.",
+      "Robust and scalable server-side systems with secure APIs, efficient databases, and cloud-ready architecture.",
     features: [
-      "Node.js & Express",
-      "Database Design",
-      "API Development",
-      "Cloud Deployment",
-      "Authentication & Authorization",
+      "Node.js & Express.js",
+      "RESTful API & JWT Authentication",
+      "Database Design & Optimization",
+      "Prisma ORM Integration",
+      "Cloud Deployment & Storage",
+      "Security & Access Control",
     ],
     popular: false,
   },
@@ -328,41 +255,77 @@ export const services = [
     icon: Globe,
     title: "Frontend Development",
     description:
-      "Modern, responsive web applications using React, TypeScript, and cutting-edge CSS frameworks.",
+      "Fast, responsive, and user-focused interfaces built with modern frameworks and optimized for performance.",
     features: [
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Responsive Design",
-      "State Management (Redux)",
-      "UI/UX Optimization",
-      "Animations (Motion)",
+      "React & TypeScript",
+      "ShadCN UI & Tailwind CSS",
+      "Responsive & Mobile-First Design",
+      "State Management (Redux Toolkit)",
+      "Data Fetching (TanStack Query)",
+      "UI Performance Optimization",
+      "Smooth Animations (Framer Motion)",
     ],
     popular: true,
   },
   {
     icon: Code2,
-    title: "Full-Stack Solutions",
+    title: "Full-Stack Web Solutions",
     description:
-      "End-to-end web application development from concept to deployment and maintenance.",
+      "Complete web applications built from concept to deployment with scalable architecture and real-time capabilities.",
     features: [
-      "Complete Web Apps",
-      "Database Integration",
-      "Authentication",
-      "Performance Optimization",
-      "Real-time Features (WebSockets)",
+      "End-to-End Web App Development",
+      "Authentication & Role-Based Access",
+      "Real-Time Features (WebSockets)",
+      "Performance & SEO Optimization",
+      "Deployment, CI/CD & Maintenance",
     ],
     popular: false,
   },
 ];
 
+
 export const projects = [
+  {
+    title: "Real Estate Website – House & Hedges",
+    description:
+      "A modern real estate platform showcasing property listings with advanced search filters, SEO optimization, responsive design, and an admin interface for property management.",
+    image: "/images/projects/house-hedges.png",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma ORM",
+      "SEO Optimization",
+      "Responsive Design",
+      "VPS + Nginx Deployment",
+    ],
+    github: "https://github.com/dev-heinhtetpaing/house-and-hedges",
+    demo: "https://houseandhedges.ae",
+    featured: true,
+  },
   {
     title: "Restaurant Management System",
     description:
-      "Full-stack restaurant management solution with real-time stock list, waiter interface, customer interface, kitchen user interface, payment processing, and admin dashboard.",
+      "A full-stack restaurant management platform featuring real-time order processing, kitchen workflow, waiter interface, stock tracking, customer ordering, payment handling, and an admin dashboard.",
     image: "/images/projects/restaurant-dashboard.png",
-    technologies: ["TypeScript", "React", "Node.js","TailWindCSS","Shadcn/UI","Prisma", "MongoDb", "React-Query","Redux-toolkits","Socket.io","EC2","S3"],
+    technologies: [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Express.js",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "Prisma ORM",
+      "MongoDB",
+      "TanStack Query",
+      "Redux Toolkit",
+      "Socket.IO",
+      "AWS EC2",
+      "AWS S3",
+    ],
     github: "https://github.com/dev-heinhtetpaing/Restaurant_Frontend",
     demo: "https://restaurant.heinhtetpaing.com",
     featured: true,
@@ -370,33 +333,46 @@ export const projects = [
   {
     title: "Social App",
     description:
-      "A social application that including features like register, login, add post, delete post, add comment, delete comment, like post, like comment, follow, unfollow, chat, reat-time notification and etc...",
+      "A full-featured social platform with authentication, posts, comments, likes, follow system, real-time chat, and live notifications.",
     image: "/images/projects/social-app.png",
-    technologies: ["React", "React Query","TailwindCSS","Express","Prisma","SQLite","JWT","WebSocket", ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Tailwind CSS",
+      "Prisma ORM",
+      "SQLite",
+      "JWT Authentication",
+      "WebSockets",
+      "TanStack Query",
+    ],
     github: "https://github.com/dev-heinhtetpaing/Frontend_Social_APP",
     demo: "https://frontend-app-k86t.onrender.com",
-    featured: true,
+    featured: false,
   },
   {
     title: "Role Permission Playground",
     description:
-      " Playground for role permission, you can assign permission to each role of user, and you can see different permission effect on the messages. All the permssion, role and users are real time updated from fully CRUD operation from backend.",
+      "A role-based access control playground demonstrating real-time permission management. Roles, permissions, and users are fully managed through CRUD operations with instant updates.",
     image: "/images/projects/role-permission-playground.png",
-    technologies: ["React", "TypeScript", "Express", "React Query","Tailwind", "Shadcn/ui","Prisma","SQLite","JsonWebToken"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "Prisma ORM",
+      "SQLite",
+      "JWT Authentication",
+      "TanStack Query",
+    ],
     github: "https://github.com/dev-heinhtetpaing/Role_Permission_Playground_Frontend",
     demo: "https://playground.heinhtetpaing.com",
     featured: false,
-  }, {
-    title: "Sample frontend SPA",
-    description:
-      " This is sample SPA example and it was also a practied app for me.",
-    image: "/images/projects/sample-spa.png",
-    technologies: ["React", "React Router", "Bootstrap", "JavaScript","CSS",],
-    github: "https://github.com/dev-heinhtetpaing/Sample-Website-With-React",
-    demo: "https://funny-poo.netlify.app",
-    featured: false,
   },
-  
+ 
 ];
 
 export const interests = [

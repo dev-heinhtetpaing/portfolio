@@ -27,7 +27,6 @@ export function PersonalitySection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Personal Image and Quote */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -38,7 +37,7 @@ export function PersonalitySection() {
             <div className="relative">
               <div className="relative w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl">
                 <img src="/images/MyGeneratePassportPhoto.png" alt="Hein Htet Paing's photo" className="object-cover " />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
               </div>
             </div>
 
@@ -53,11 +52,9 @@ export function PersonalitySection() {
                 "I believe great software is born from the perfect blend of technical excellence, creative thinking, and
                 genuine care for the people who will use it."
               </p>
-              <footer className="text-sm font-medium">— My Development Philosophy</footer>
             </motion.blockquote>
           </motion.div>
 
-          {/* Interests and Values */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -65,7 +62,6 @@ export function PersonalitySection() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Interests */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <Code2 className="w-6 h-6 text-primary" />
@@ -95,7 +91,6 @@ export function PersonalitySection() {
               </div>
             </div>
 
-            {/* Values */}
             <div>
               <h3 className="text-2xl font-semibold mb-6">What I Value</h3>
               <div className="space-y-3">

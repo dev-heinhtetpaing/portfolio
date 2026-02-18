@@ -18,10 +18,10 @@ export function Navigation() {
     { name: "Skills", href: "skills" },
     { name: "Contact", href: "contact" },
   ];
-  const ScrollIntoView=(href:string)=>{
-    const element=document.getElementById(href)
-    if(element){
-      element.scrollIntoView({behavior:"smooth"})
+  const ScrollIntoView = (href: string) => {
+    const element = document.getElementById(href)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
     }
   }
   return (
@@ -39,20 +39,18 @@ export function Navigation() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif font-bold text-xl text-foreground"
           >
-            Hein Htet Paing
+            Hein <span className="text-accent">Htet</span>
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              console.log(item.href),
               <motion.span
                 key={item.name}
                 onClick={() => ScrollIntoView(item.href)}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-                // href={item.href}
                 className={`${AcitveSection === item.name ? "text-accent" : "text-muted-foreground"} hover:text-foreground transition-colors duration-200 cursor-pointer`}
               >
                 {item.name}
@@ -69,8 +67,7 @@ export function Navigation() {
           >
             <Button
               onClick={() =>
-                location.assign("https://github.com/dev-heinhtetpaing")
-              }
+                window.open("https://github.com/dev-heinhtetpaing", "_blank")}
               variant="ghost"
               size="sm"
               className="p-2"
@@ -79,8 +76,9 @@ export function Navigation() {
             </Button>
             <Button
               onClick={() =>
-                location.assign(
-                  "https://www.linkedin.com/in/hein-htet-paing-1053462b1"
+                window.open(
+                  "https://www.linkedin.com/in/hein-htet-paing-1053462b1",
+                  "_blank"
                 )
               }
               variant="ghost"
@@ -130,7 +128,7 @@ export function Navigation() {
               <div className="flex items-center space-x-4 pt-4 border-t border-border">
                 <Button
                   onClick={() =>
-                    location.assign("https://github.com/dev-heinhtetpaing")
+                    window.open("https://github.com/dev-heinhtetpaing", "_blank")
                   }
                   variant="ghost"
                   size="sm"
@@ -140,8 +138,9 @@ export function Navigation() {
                 </Button>
                 <Button
                   onClick={() =>
-                    location.assign(
-                      "https://www.linkedin.com/in/hein-htet-paing-1053462b1"
+                    window.open(
+                      "https://www.linkedin.com/in/hein-htet-paing-1053462b1",
+                      "_blank"
                     )
                   }
                   variant="ghost"
@@ -151,7 +150,7 @@ export function Navigation() {
                   <Linkedin className="w-4 h-4" />
                 </Button>
                 <Button variant="ghost" size="sm" className="p-2">
-                  <a href="mailto:heinhtetpaing2273@gmail.com">
+                  <a href="mailto:heinhtetpaing2273@gmail.com" target="_blank">
                     <Mail className="w-4 h-4" />
                   </a>
                 </Button>

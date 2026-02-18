@@ -1,15 +1,11 @@
 'use client'
 
-// import useActiveSection from "../hook/useActiveSection";
 import { skills } from "@/api/data";
 import { useActiveSection } from "@/hook/useActiveSection";
 import type { Variants } from "motion/react";
 import { motion } from "motion/react";
 
 function Skills() {
-  //   const { ref } = useActiveSection("Skills", 1);
-
-
   const FadeInAnimation: Variants = {
     initial: { y: 100, opacity: 0 },
     animate: (index: number) => ({

@@ -43,22 +43,24 @@ export function AboutSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto  w-full ">
+          <div  className="w-full mx-auto grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
           <motion.div
+          className="w-full"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <div className="space-y-6">
-              <p className="text-foreground text-lg leading-relaxed">
-                I'm a passionate full-stack developer with over 1 years of
+              <p className="text-foreground text-lg leading-relaxed word-wrap">
+                I'm a passionate full-stack developer with over 2 years of
                 experience building modern web applications. I specialize in
                 creating scalable, performant solutions using the latest
                 technologies and best practices.
               </p>
 
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed word-wrap">
                 My expertise spans from crafting pixel-perfect user interfaces
                 with React and TypeScript to building robust backend systems
                 with Node.js and modern databases. I'm always exploring new
@@ -102,6 +104,7 @@ export function AboutSection() {
           </motion.div>
 
           <motion.div
+          className="w-full"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -146,6 +149,7 @@ export function AboutSection() {
               ))}
             </div>
           </motion.div>
+          </div>
         </div>
       </div>
     </section>

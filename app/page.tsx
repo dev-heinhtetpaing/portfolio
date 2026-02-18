@@ -10,7 +10,6 @@ import Skills from "@/pages/skill-section"
 export default function Home() {
     return (
         <>
-           {/* <div className="relative min-h-screen h-screen w-screen ">  */}
             <HeroSection />
             <AboutSection />
             <PersonalitySection />
@@ -19,7 +18,6 @@ export default function Home() {
             <ExperienceSection />
             <ProjectsSection />
             <ContactSection />
-            {/* </div>  */}
         </>
     )
 }
