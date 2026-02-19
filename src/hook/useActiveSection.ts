@@ -11,6 +11,6 @@ export const useActiveSection=(section:string,thresdhold:number=5)=>{
         if(inView){
             dispatch(setAcitveSection(section))
         }
-    },[ref,inView,section])
+    },[inView,section,dispatch])
     return {ref}
     }

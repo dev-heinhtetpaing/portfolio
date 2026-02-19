@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { ReduxProvider } from '@/providers/ReduxProvider'
-import { Navigation } from '@/pages/navigation'
+import { Navigation } from '@/components/navigation'
 import '@/index.css'
 
 export const metadata: Metadata = {

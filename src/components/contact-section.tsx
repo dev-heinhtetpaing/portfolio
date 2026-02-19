@@ -36,6 +36,7 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useActiveSection } from "@/hook/useActiveSection";
 export function ContactSection() {
+  
   const [loading, setLoading] = useState(false);
 
   const formSchema = z.object({
@@ -56,14 +57,14 @@ export function ContactSection() {
       setLoading(true);
       emailjs
         .send(
-          import.meta.env.VITE_EMAIL_SERVICE_ID,
-          import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+          process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID || '',
+          process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID || '',
           {
             from_name: data.name,
             from_email: data.email,
             message: data.message,
           },
-          import.meta.env.VITE_EMAIL_PUBLIC_ID
+          process.env.NEXT_PUBLIC_EMAIL_PUBLIC_ID || ''
         )
         .then(
           () => {
