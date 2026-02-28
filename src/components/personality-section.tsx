@@ -36,7 +36,7 @@ export function PersonalitySection() {
           >
             <div className="relative">
               <div className="relative w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl">
-                <img src="/images/MyGeneratePassportPhoto.png" alt="Hein Htet Paing's photo" className="object-cover " />
+                <img src="/images/MyGeneratePassportPhoto.png" alt="Hein Htet Paing" className="object-cover " />
                 <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
               </div>
             </div>

@@ -166,7 +166,7 @@ export const HeroSection = () => {
       <div className="absolute bottom-0 h-[50%] w-full sm:h-[80vh]">
         <div className=" image relative">
           <div className="Image-overlay"></div>
-          <Image src="/Hein-cros.webp" alt="Hein Htet Paing" className="absolute  drop-shadow-foreground drop-shadow-2xl object-cover object-top" fill={true} />
+          <Image src="/Hein Htet Paing.webp" alt="Hein Htet Paing" className="absolute  drop-shadow-foreground drop-shadow-2xl object-cover object-top" fill={true} />
 
         </div>
       </div>
