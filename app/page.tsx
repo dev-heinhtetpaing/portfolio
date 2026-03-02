@@ -10,6 +10,9 @@ import Skills from "@/components/skill-section"
 
 export const metadata: Metadata = {
   title: "Hein Htet Paing | Full Stack Developer",
+  alternates:{
+    canonical: "https://heinhtetpaing.com/",
+  },
   description:
     "Full-stack developer specializing in TypeScript, React, and Node.js. Building scalable web applications with modern technologies. Based in Dubai, UAE.",
   keywords: [
@@ -29,6 +32,14 @@ export const metadata: Metadata = {
       "Full-stack developer specializing in TypeScript, React, and Node.js. Building scalable web applications.",
     url: "https://heinhtetpaing.com",
     siteName: "Hein Htet Paing",
+    images: [
+      {
+        url: "https://heinhtetpaing.com/Hein Htet Paing.webp",
+        width: 1200,
+        height: 630,
+        alt: "Hein Htet Paing",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
