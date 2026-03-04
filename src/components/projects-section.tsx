@@ -7,7 +7,7 @@ import { motion } from "motion/react"
 import { ExternalLink, Github, ArrowRight } from "lucide-react"
 import { projects } from "@/api/data"
 import { useActiveSection } from "@/hook/useActiveSection"
-
+import Image from "next/image"
 export function ProjectsSection() {
   const { ref } = useActiveSection("Projects", 0.5)
 
@@ -37,13 +37,17 @@ export function ProjectsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
+                className="w-full h-full"
               >
                 <Card className="group hover:shadow-lg transition-all duration-300 border-border bg-card overflow-hidden">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  <div className="relative overflow-hidden w-full h-48">
+                    <Image
+                      src={project.image || ""}
+                      alt={project.title || ""}
+                      className=" object-cover group-hover:scale-105 transition-transform duration-300"
+                      fill={true}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+                   
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>

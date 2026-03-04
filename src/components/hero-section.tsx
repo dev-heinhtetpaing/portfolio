@@ -104,7 +104,7 @@ export const HeroSection = () => {
   }, { scope: sectionRef });
   return (
     <div ref={sectionRef} id="hero-section" className=" w-full  layer relative sm:py-20 py-10  overflow-hidden">
-      <main className="sm:w-1/2 w-full sm:mr-auto sm:h-full h-[50%] flex flex-row justify-center items-center ">
+      <main className="lg:w-1/2 w-full lg:mr-auto lg:h-full h-[50%] flex flex-row justify-center items-center ">
         <div className="mx-5 sm:mx-15 space-y-5 hero-text opacity-0">
           <section className="relative min-h-screen flex items-center justify-end overflow-hidden">
             <div className="absolute inset-0 bg-grid-pattern opacity-5" />
@@ -163,14 +163,17 @@ export const HeroSection = () => {
         </div>
       </main>
 
-      <div className="absolute bottom-0 h-[50%] w-full sm:h-[80vh]">
+      <div className="absolute bottom-0 h-[50%] w-full md:h-[80vh]">
         <div className=" image relative">
           <div className="Image-overlay"></div>
-          <Image src="/Hein Htet Paing.webp" alt="Hein Htet Paing" className="absolute  drop-shadow-foreground drop-shadow-2xl object-cover object-top" fill={true} />
+          <Image src="/Hein Htet Paing.webp" alt="Hein Htet Paing" className="absolute  drop-shadow-foreground drop-shadow-2xl object-cover object-top" fill={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+          priority
+          />
 
         </div>
       </div>
-      <div className="absolute bottom-0  right-0 md:right-15 sm:right-10 xl:right-25 sm:w-1/2 w-full  xl:w-1/2 h-2/3 sm:h-[80%] ">
+      <div className="absolute bottom-0  right-0 md:right-45  lg:right-15 xl:right-25 lg:w-1/2 w-full  xl:w-1/2 h-2/3 sm:h-1/3  lg:h-[80%] ">
         <div className="relative w-full h-full  " ref={badgesContainerRef}>
 
           <div className="absolute badge bottom-0 opacity-0 left-0 b1 w-15 h-15 sm:w-18 sm:h-18 shadow-lg rounded-full border-2 border-gray-200">

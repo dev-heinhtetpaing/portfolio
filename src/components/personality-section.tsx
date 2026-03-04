@@ -4,6 +4,7 @@ import { motion } from "motion/react"
 import { Code2 } from "lucide-react"
 import { interests, values } from "@/api/data"
 import { useActiveSection } from "@/hook/useActiveSection"
+import Image from "next/image"
 export function PersonalitySection() {
 
   const { ref } = useActiveSection("Personal", 0.3)
@@ -36,7 +37,10 @@ export function PersonalitySection() {
           >
             <div className="relative">
               <div className="relative w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl">
-                <img src="/images/MyGeneratePassportPhoto.png" alt="Hein Htet Paing" className="object-cover " />
+                <Image src="/images/MyGeneratePassportPhoto.png" alt="Hein Htet Paing" className="object-cover " fill={true}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+                  
+                />
                 <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
               </div>
             </div>
