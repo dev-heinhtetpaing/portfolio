@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location (update yourdomain.com to your actual domain)
-Sitemap: https://heinhtetpaing.com/sitemap.xml
+Sitemap: https://www.heinhtetpaing.com/sitemap.xml
