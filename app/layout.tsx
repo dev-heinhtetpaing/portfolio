@@ -8,20 +8,25 @@ const jsonLd = {
     '@type': 'Person',
     name: 'Hein Htet Paing',
     url: 'https://www.heinhtetpaing.com',
-    jobTitle: 'Web Developer',
+    image: 'https://www.heinhtetpaing.com/Hein Htet Paing.webp',
+    jobTitle: 'Full Stack Developer',
     alumniOf: {
         '@type': 'CollegeOrUniversity',
         name: 'University of Computer Studies',
     },
     sameAs: [
-        'https://github.com/your-username',
-        'https://linkedin.com/in/your-username',
-    ],
+        'https://github.com/dev-heinhtetpaing',
+        'https://linkedin.com/in/hein-htet-paing',
+    ], 
+    "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
     knowsAbout: ['React', 'Next.js', 'JavaScript', 'Web Development'],
 };
 
 export const metadata: Metadata = {
-    title: "Hein Htet Paing | Full Stack Developer",
+    title: "Hein Htet Paing | Full Stack Developer | React & Next.js",
     metadataBase: new URL('https://www.heinhtetpaing.com'),
     alternates: {
         canonical: "https://www.heinhtetpaing.com/",
@@ -30,8 +35,10 @@ export const metadata: Metadata = {
     description:
         "Full-stack developer specializing in TypeScript, React, and Node.js. Building scalable web applications with modern technologies. Based in Dubai, UAE.",
     keywords: [
+        "Hein Htet Paing",
         "Full Stack Developer",
         "React",
+        "Next.js",
         "TypeScript",
         "Node.js",
         "Web Developer",
@@ -41,7 +48,7 @@ export const metadata: Metadata = {
     authors: [{ name: "Hein Htet Paing", url: "https://www.heinhtetpaing.com/" }],
     openGraph: {
         type: "website",
-        title: "Hein Htet Paing | Full Stack Developer",
+        title: "Hein Htet Paing | Full Stack Developer | React & Next.js",
         description:
             "Full-stack developer specializing in TypeScript, React, and Node.js. Building scalable web applications.",
         url: "https://www.heinhtetpaing.com",
@@ -57,7 +64,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Hein Htet Paing | Full Stack Developer",
+        title: "Hein Htet Paing | Full Stack Developer | React & Next.js",
         description:
             "Full-stack developer specializing in TypeScript, React, and Node.js.",
     },

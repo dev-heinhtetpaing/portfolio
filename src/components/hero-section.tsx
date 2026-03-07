@@ -9,7 +9,7 @@ import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
 import { TextPlugin } from "gsap/all";
 import { motion } from "motion/react";
-import { ArrowRight, Code2, Sparkles } from "lucide-react";
+import { Code2, Sparkles, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 
@@ -104,7 +104,7 @@ export const HeroSection = () => {
   }, { scope: sectionRef });
   return (
     <div ref={sectionRef} id="hero-section" className=" w-full  layer relative sm:py-20 py-10  overflow-hidden">
-      <main className="lg:w-1/2 w-full lg:mr-auto lg:h-full h-[50%] flex flex-row justify-center items-center ">
+      <main className="lg:w-1/2 w-full lg:mr-auto lg:h-full h-[60%] flex flex-row justify-center items-center ">
         <div className="mx-5 sm:mx-15 space-y-5 hero-text opacity-0">
           <section className="relative min-h-screen flex items-center justify-end overflow-hidden">
             <div className="absolute inset-0 bg-grid-pattern opacity-5" />
@@ -128,13 +128,13 @@ export const HeroSection = () => {
                   Available for new opportunities
                 </motion.div>
 
-                <h1 className="font-serif font-black text-4xl md:text-6xl lg:text-7xl text-foreground mb-6 leading-tight">
-                  Crafting Modern
+                <h1 className="font-serif font-black text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-foreground mb-4 sm:mb-6 leading-tight">
+                  Hein Htet Paing
                   <br />
-                  <span className="text-accent">Web Applications</span>
+                  <span className="text-accent">Full Stack Developer | React & Next.js</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
                   Full-stack developer specializing in TypeScript, React, and cutting-edge web technologies. Building
                   scalable, performant applications with exceptional user experiences.
                 </p>
@@ -143,18 +143,18 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                  className="flex flex-row gap-4 justify-center items-center "
                 >
-                  <Button size="lg" onClick={() => location.assign("/mywork")} className="group">
-                    View My Work
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <Button size="default" onClick={() => location.assign("/mywork")} className="group">
+                    <span className="hidden sm:block">View My Work</span>
+                    <TrendingUp className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                   <Button
                     onClick={() => window.open("https://github.com/dev-heinhtetpaing/Portfolio", "_blank")}
 
-                    variant="outline" size="lg" className="group bg-transparent">
+                    variant="outline" size="default" className="group bg-transparent">
                     <Code2 className="mr-2 w-4 h-4" />
-                    See My Code
+                    <span className="hidden sm:block">See My Code</span>
                   </Button>
                 </motion.div>
               </motion.div>

@@ -289,7 +289,7 @@ export const projects = [
     title: "Real Estate Website – House & Hedges",
     description:
       "A modern real estate platform showcasing property listings with advanced search filters, SEO optimization, responsive design, and an admin interface for property management.",
-    image: "/images/projects/house-hedges.png",
+    image: "/images/projects/house-hedges.webp",
     technologies: [
       "React",
       "TypeScript",
@@ -310,7 +310,7 @@ export const projects = [
     title: "Restaurant Management System",
     description:
       "A full-stack restaurant management platform featuring real-time order processing, kitchen workflow, waiter interface, stock tracking, customer ordering, payment handling, and an admin dashboard.",
-    image: "/images/projects/restaurant-dashboard.png",
+    image: "/images/projects/restaurant-dashboard.webp",
     technologies: [
       "TypeScript",
       "React",

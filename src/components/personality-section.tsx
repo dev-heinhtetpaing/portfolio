@@ -37,7 +37,7 @@ export function PersonalitySection() {
           >
             <div className="relative">
               <div className="relative w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/images/MyGeneratePassportPhoto.png" alt="Hein Htet Paing" className="object-cover " fill={true}
+                <Image src="/images/hein using laptop.webp" alt="Hein Htet Paing" className="object-cover " fill={true}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
                   
                 />
