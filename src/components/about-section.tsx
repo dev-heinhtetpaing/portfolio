@@ -53,7 +53,7 @@ export function AboutSection() {
             viewport={{ once: true }}
           >
             <div className="space-y-6">
-              <p className="text-foreground text-lg leading-relaxed word-wrap">
+              <p className="text-muted-foreground text-lg leading-relaxed word-wrap">
                 I'm a passionate full-stack developer with over 2 years of
                 experience building modern web applications. I specialize in
                 creating scalable, performant solutions using the latest

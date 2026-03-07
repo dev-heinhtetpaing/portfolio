@@ -104,7 +104,7 @@ export const HeroSection = () => {
   }, { scope: sectionRef });
   return (
     <div ref={sectionRef} id="hero-section" className=" w-full  layer relative sm:py-20 py-10  overflow-hidden">
-      <main className="lg:w-1/2 w-full lg:mr-auto lg:h-full h-[60%] flex flex-row justify-center items-center ">
+      <main className="lg:w-1/2 w-full lg:mr-auto lg:h-full h-[60%] sm:h-[50%] flex flex-row justify-center items-center ">
         <div className="mx-5 sm:mx-15 space-y-5 hero-text opacity-0">
           <section className="relative min-h-screen flex items-center justify-end overflow-hidden">
             <div className="absolute inset-0 bg-grid-pattern opacity-5" />
@@ -128,7 +128,7 @@ export const HeroSection = () => {
                   Available for new opportunities
                 </motion.div>
 
-                <h1 className="font-serif font-black text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-foreground mb-4 sm:mb-6 leading-tight">
+                <h1 className="font-serif font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 sm:mb-6 leading-tight">
                   Hein Htet Paing
                   <br />
                   <span className="text-accent">Full Stack Developer | React & Next.js</span>

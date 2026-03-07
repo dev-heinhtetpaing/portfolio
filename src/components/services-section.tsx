@@ -93,16 +93,16 @@ const CollapsibleComponent = ({
         <CardTitle className="text-foreground group-hover:text-accent transition-colors">
           {title}
         </CardTitle>
-        <CardDescription className="text-muted-foreground">
+        <CardDescription className="text-muted-foreground ">
           {description}
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ul className="space-y-3 mb-6">
+        <ul className="space-y-3 mb-6 ">
           {features.slice(0, 3).map((feature, i) => (
             <li key={i} className="flex items-center gap-3 text-sm">
               <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
-              <span className="text-foreground">{feature}</span>
+              <span className="text-foreground text-sm">{feature}</span>
             </li>
           ))}
           <Collapsible open={isOpen} onOpenChange={setIsOpen}>
