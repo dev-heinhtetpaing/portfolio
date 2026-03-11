@@ -34,10 +34,11 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <motion.div
+            onClick={() => window.location.href = "/"}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif font-bold text-xl text-foreground"
+            className="font-serif font-bold text-xl text-foreground cursor-pointer "
           >
             Hein <span className="text-accent">Htet</span>
           </motion.div>
@@ -118,9 +119,8 @@ export function Navigation() {
               {navItems.map((item) => (
                 <a
                   key={item.name}
-                  href={item.href}
-                  className={`${AcitveSection === item.name ? "text-accent" : "text-muted-foreground"} block  hover:text-foreground transition-colors duration-200 py-2`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() =>{ ScrollIntoView(item.href); setIsOpen(false) }} 
+                  className={`${AcitveSection === item.name ? "text-accent" : "text-muted-foreground"} block  hover:text-foreground transition-colors duration-200 py-2 cursor-pointer`}
                 >
                   {item.name}
                 </a>
