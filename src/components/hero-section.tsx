@@ -166,8 +166,10 @@ export const HeroSection = () => {
       <div className="absolute bottom-0 h-[50%] w-full md:h-[80vh]">
         <div className=" image relative">
           <div className="Image-overlay"></div>
-          <Image src="/Hein Htet Paing.webp" alt="Hein Htet Paing" className="absolute  drop-shadow-foreground drop-shadow-2xl object-cover object-top" fill={true}
+          <Image src="/Hein Htet Paing.png" alt="Hein Htet Paing" className="absolute  drop-shadow-foreground drop-shadow-2xl object-cover object-top" fill={true}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+          placeholder="blur"
+          blurDataURL="/Hein Htet Paing.png"
           priority
           />
 
