@@ -36,8 +36,8 @@ export function PersonalitySection() {
             className="space-y-6"
           >
             <div className="relative">
-              <div className="relative w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/images/hein using laptop.webp" alt="Hein Htet Paing" className="object-cover " fill={true}
+              <div className="relative w-90 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <Image src="/Hein Htet Paing Image.png" alt="Hein Htet Paing" className="object-cover " fill={true}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
                   
                 />

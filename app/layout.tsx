@@ -72,7 +72,7 @@ export const metadata: Metadata = {
         siteName: "Hein Htet Paing",
         images: [
             {
-                url: "https://www.heinhtetpaing.com/Hein Htet Paing.webp",
+                url: "https://www.heinhtetpaing.com/Hein Htet Paing.png",
                 width: 1200,
                 height: 630,
                 alt: "Hein Htet Paing",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
             "Full-stack developer specializing in TypeScript, React, and Node.js.",
         images: [
             {
-                url: "https://www.heinhtetpaing.com/Hein Htet Paing.webp",
+                url: "https://www.heinhtetpaing.com/Hein Htet Paing.png",
                 width: 1200,
                 height: 630,
                 alt: "Hein Htet Paing",

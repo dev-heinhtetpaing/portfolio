@@ -128,7 +128,7 @@ export const HeroSection = () => {
                   Available for new opportunities
                 </motion.div>
 
-                <h1 className="font-serif font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 sm:mb-6 leading-tight">
+                <h1 className="font-serif font-black text-xl sm:text-2xl md:text-3xl lg:text-3xl text-foreground mb-4 sm:mb-6 leading-tight">
                   Hein Htet Paing
                   <br />
                   <span className="text-accent">Full Stack Developer | React & Next.js</span>
