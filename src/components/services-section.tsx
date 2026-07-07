@@ -16,9 +16,9 @@ import { useState } from "react";
 import { useActiveSection } from "@/hook/useActiveSection";
 
 export function ServicesSection() {
-  const { ref } = useActiveSection("Service", 0.5)
+  const { ref } = useActiveSection("Services", 0.5)
   return (
-    <section ref={ref} id="service" className="py-20 bg-muted/30">
+    <section ref={ref} id="service" className="py-20 scroll-mt-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

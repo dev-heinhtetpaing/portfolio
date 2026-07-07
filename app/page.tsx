@@ -14,8 +14,8 @@ export default function Home() {
     return (
         <>
             <HeroSection />
-            <AboutSection />
             <PersonalitySection />
+            <AboutSection />
             <Skills />
             <ServicesSection />
             <ExperienceSection />

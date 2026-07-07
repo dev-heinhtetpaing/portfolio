@@ -19,7 +19,7 @@ function Skills() {
   const { ref } = useActiveSection("Skills", 0.5)
 
   return (
-    <section id="skills" ref={ref} className="py-20 scroll-mt-30 bg-gradient-to-br from-background via-background to-muted">
+    <section id="skills" ref={ref} className="py-20 scroll-mt-10 bg-gradient-to-br from-background via-background to-muted">
       <div className="container mx-auto px-4">
         <div
           className="text-center mb-16"

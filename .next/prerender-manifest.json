@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "e394f60ef3206d7ecec98f7243fc2a53",
-    "previewModeSigningKey": "dae628afe83a7bb51d5efa1955be7609020fee9e5f6626ec49445844fdee8d5b",
-    "previewModeEncryptionKey": "1e33b9f3d5b6eb3350ef1a0551a4a886aff5ca228135e690f5a5032148cd7b32"
-  }
-}
+{"version":4,"routes":{"/projects/whatsapp-broadcasting-system":{},"/projects/house-and-hedges-platform":{},"/projects/restaurant-management-system":{},"/projects/social-media-platform":{}},"dynamicRoutes":{"/projects/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/projects/[slug]","routeRegex":"^\\/projects\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"b9c9237b00c2605e501d972f3622cf75","previewModeSigningKey":"671417817e6b50cbd0f4df1065549a7fcd29a3ec2a2bec15912e186e4eb4b470","previewModeEncryptionKey":"2064f898767691724279eba6326a0b320346fce95c40ac7f3104b71c3f259b2d"}}

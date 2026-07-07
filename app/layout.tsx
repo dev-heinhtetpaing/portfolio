@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { ReduxProvider } from '@/providers/ReduxProvider'
 import { Navigation } from '@/components/navigation'
+import { SideNav } from '@/components/side-nav'
 import '@/index.css'
 import Script from 'next/script'
 
@@ -118,6 +119,7 @@ export default function RootLayout({
             <body>
                 <ReduxProvider>
                     <Navigation />
+                    <SideNav />
                     {children}
                     <Script
                         id="json-ld"

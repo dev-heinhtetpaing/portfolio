@@ -1,29 +1,23 @@
 'use client'
 
-import { Button } from "@/components/ui/button";
-import { motion } from "motion/react";
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
-import { useState } from "react";
-import { useAppSelector } from "@/hook/hook";
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { motion } from "motion/react"
+import { Briefcase, FolderKanban, Github, Linkedin, Mail } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+
+const routeLinks = [
+  { name: "Experiences", href: "/experiences", icon: Briefcase },
+  { name: "Projects", href: "/projects", icon: FolderKanban },
+]
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const AcitveSection = useAppSelector(state => state.active_section.active)
-  const navItems = [
-    { name: "About", href: "about" },
-    { name: "Experience", href: "experience" },
-    { name: "Services", href: "service" },
-    { name: "Projects", href: "projects" },
-    { name: "Personal", href: "personal" },
-    { name: "Skills", href: "skills" },
-    { name: "Contact", href: "contact" },
-  ];
-  const ScrollIntoView = (href: string) => {
-    const element = document.getElementById(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
+  const pathname = usePathname()
+  const isRouteActive = (href: string) =>
+    pathname === href || pathname.startsWith(`${href}/`)
+
   return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
@@ -32,133 +26,85 @@ export function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 gap-2 sm:gap-4">
           <motion.div
-            onClick={() => window.location.href = "/"}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif font-bold text-xl text-foreground cursor-pointer "
+            className="font-serif font-bold text-xl text-foreground shrink-0"
           >
-            Hein <span className="text-accent">Htet</span>
+            <Link href="/" className="hover:opacity-80 transition-opacity">
+              Hein <span className="text-accent">Htet</span>
+            </Link>
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => (
-              <motion.span
-                key={item.name}
-                onClick={() => ScrollIntoView(item.href)}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-                className={`${AcitveSection === item.name ? "text-accent" : "text-muted-foreground"} hover:text-foreground transition-colors duration-200 cursor-pointer`}
-              >
-                {item.name}
-              </motion.span>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="flex items-center gap-1 sm:gap-2"
+          >
+            {routeLinks.map((link) => {
+              const active = isRouteActive(link.href)
+              return (
+                <Button
+                  key={link.href}
+                  asChild
+                  variant="ghost"
+                  size="sm"
+                  className={cn(
+                    "gap-2 transition-colors",
+                    active
+                      ? "text-accent hover:text-accent"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  <Link href={link.href}>
+                    <link.icon className="w-4 h-4" />
+                    <span className="hidden sm:inline">{link.name}</span>
+                  </Link>
+                </Button>
+              )
+            })}
+          </motion.div>
 
-          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden md:flex items-center space-x-4"
+            className="flex items-center gap-1 shrink-0"
           >
-            <Button
-              onClick={() =>
-                window.open("https://github.com/dev-heinhtetpaing", "_blank")}
-              variant="ghost"
-              size="sm"
-              className="p-2"
-            >
-              <Github className="w-4 h-4" />
+            <Button asChild variant="ghost" size="sm" className="p-2">
+              <a
+                href="https://github.com/dev-heinhtetpaing"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github className="w-4 h-4" />
+              </a>
             </Button>
-            <Button
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/hein-htet-paing-1053462b1",
-                  "_blank"
-                )
-              }
-              variant="ghost"
-              size="sm"
-              className="p-2"
-            >
-              <Linkedin className="w-4 h-4" />
+            <Button asChild variant="ghost" size="sm" className="p-2">
+              <a
+                href="https://www.linkedin.com/in/hein-htet-paing-1053462b1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
             </Button>
-            <Button variant="ghost" size="sm" className="p-2">
-              <a href="mailto:heinhtetpaing2273@gmail.com">
+            <Button asChild variant="ghost" size="sm" className="p-2">
+              <a
+                href="mailto:heinhtetpaing2273@gmail.com"
+                aria-label="Email"
+              >
                 <Mail className="w-4 h-4" />
               </a>
             </Button>
           </motion.div>
-
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </Button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-border bg-background"
-          >
-            <div className="py-4 space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  onClick={() =>{ ScrollIntoView(item.href); setIsOpen(false) }} 
-                  className={`${AcitveSection === item.name ? "text-accent" : "text-muted-foreground"} block  hover:text-foreground transition-colors duration-200 py-2 cursor-pointer`}
-                >
-                  {item.name}
-                </a>
-              ))}
-              <div className="flex items-center space-x-4 pt-4 border-t border-border">
-                <Button
-                  onClick={() =>
-                    window.open("https://github.com/dev-heinhtetpaing", "_blank")
-                  }
-                  variant="ghost"
-                  size="sm"
-                  className="p-2"
-                >
-                  <Github className="w-4 h-4" />
-                </Button>
-                <Button
-                  onClick={() =>
-                    window.open(
-                      "https://www.linkedin.com/in/hein-htet-paing-1053462b1",
-                      "_blank"
-                    )
-                  }
-                  variant="ghost"
-                  size="sm"
-                  className="p-2"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </Button>
-                <Button variant="ghost" size="sm" className="p-2">
-                  <a href="mailto:heinhtetpaing2273@gmail.com" target="_blank">
-                    <Mail className="w-4 h-4" />
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-        )}
       </div>
     </motion.nav>
-  );
+  )
 }

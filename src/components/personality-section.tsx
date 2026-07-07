@@ -4,6 +4,7 @@ import { motion } from "motion/react"
 import { Code2 } from "lucide-react"
 import { interests, values } from "@/api/data"
 import { useActiveSection } from "@/hook/useActiveSection"
+import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 export function PersonalitySection() {
 
@@ -97,18 +98,22 @@ export function PersonalitySection() {
 
             <div>
               <h3 className="text-2xl font-semibold mb-6">What I Value</h3>
-              <div className="space-y-3">
+              <div className="flex flex-wrap gap-2">
                 {values.map((value, index) => (
                   <motion.div
                     key={value}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.5 + index * 0.08 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-3 bg-muted/50 rounded-lg p-3"
                   >
-                    <div className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="text-sm font-medium">{value}</span>
+                    <Badge
+                      variant="secondary"
+                      className="text-sm font-medium px-3 py-1.5 gap-2 bg-muted/60 text-foreground border border-border/60 hover:bg-primary/10 hover:text-primary hover:border-primary/30 transition-colors cursor-default"
+                    >
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                      {value}
+                    </Badge>
                   </motion.div>
                 ))}
               </div>
