@@ -6,7 +6,6 @@ import { motion } from "motion/react"
 import {
   ArrowLeft,
   ArrowRight,
-  FolderKanban,
   Layers,
   Sparkles,
   Wrench,
