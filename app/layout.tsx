@@ -43,62 +43,7 @@ const jsonLd = {
 }
 
 export const metadata: Metadata = {
-    title: "Hein Htet Paing | Full Stack Developer | React & Next.js",
     metadataBase: new URL('https://www.heinhtetpaing.com'),
-    alternates: {
-        canonical: "https://www.heinhtetpaing.com/",
-    },
-
-    description:
-        "Full-stack developer specializing in TypeScript, React, and Node.js. Building scalable web applications with modern technologies. Based in Dubai, UAE.",
-    keywords: [
-        "Hein Htet Paing",
-        "Full Stack Developer",
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Node.js",
-        "Web Developer",
-        "Dubai",
-        "Portfolio",
-    ],
-    authors: [{ name: "Hein Htet Paing", url: "https://www.heinhtetpaing.com/" }],
-    openGraph: {
-        type: "website",
-        title: "Hein Htet Paing | Full Stack Developer | React & Next.js",
-        description:
-            "Full-stack developer specializing in TypeScript, React, and Node.js. Building scalable web applications.",
-        url: "https://www.heinhtetpaing.com",
-        locale: "en_US",
-        siteName: "Hein Htet Paing",
-        images: [
-            {
-                url: "https://www.heinhtetpaing.com/Hein Htet Paing.png",
-                width: 1200,
-                height: 630,
-                alt: "Hein Htet Paing",
-            },
-        ],
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Hein Htet Paing | Full Stack Developer | React & Next.js",
-        description:
-            "Full-stack developer specializing in TypeScript, React, and Node.js.",
-        images: [
-            {
-                url: "https://www.heinhtetpaing.com/Hein Htet Paing.png",
-                width: 1200,
-                height: 630,
-                alt: "Hein Htet Paing",
-            },
-        ],
-    },
-    robots: {
-        index: true,
-        follow: true,
-    },
-   
 }
 
 export default function RootLayout({
@@ -131,4 +76,3 @@ export default function RootLayout({
         </html>
     )
 }
-
