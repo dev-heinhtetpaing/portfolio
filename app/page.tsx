@@ -15,6 +15,7 @@ export const metadata: Metadata = {
         "Full-stack developer specializing in TypeScript, React, and Node.js. Building scalable web applications with modern technologies. Based in Dubai, UAE.",
     keywords: [
         "Hein Htet Paing",
+        "Hein Htet",
         "Full Stack Developer",
         "React",
         "Next.js",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
         "Dubai",
         "Portfolio",
     ],
-    authors: [{ name: "Hein Htet Paing", url: "https://www.heinhtetpaing.com/" }],
+    authors: [{ name: "Hein Htet Paing",  url: "https://www.heinhtetpaing.com/" }],
     alternates: {
         canonical: "https://www.heinhtetpaing.com/",
     },

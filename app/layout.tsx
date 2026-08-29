@@ -11,7 +11,9 @@ const jsonLd = {
         {
             "@type": "Person",
             "name": "Hein Htet Paing",
+            "alternateName": "Hein Htet",
             "url": "https://www.heinhtetpaing.com",
+            "logo": "https://www.heinhtetpaing.com/favicon.ico",
             "image": "https://www.heinhtetpaing.com/Hein Htet Paing.webp",
             "jobTitle": "Full Stack Developer",
             "alumniOf": {
@@ -36,6 +38,7 @@ const jsonLd = {
         {
             "@type": "WebSite",
             "name": "Hein Htet Paing",
+            "alternateName": "Hein Htet",
             "url": "https://www.heinhtetpaing.com",
             "logo": "https://www.heinhtetpaing.com/favicon.ico"
         }

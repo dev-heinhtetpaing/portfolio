@@ -45,49 +45,70 @@ export const skills = [
 
 export const activities = [
   {
+    title: "Relocating to Dubai as Full-Stack Web Developer & IT Specialist",
+    company: "House & Hedges Real Estate",
+    location: "Dubai, UAE",
+    period: "September 2025 - Present",
+    type: "work",
+    description:
+      "Moved to Dubai to lead the full-stack rebuild of a legacy real estate platform. I architected and deployed a custom, high-performance system while owning day-to-day IT operations across the company.",
+    achievements: [
+      { Icon: MapPin, value: "Relocated to Dubai, UAE" },
+      { Icon: BriefcaseBusiness, value: "Architected and launched a custom real estate platform replacing a legacy WordPress system, delivering a modern UI/UX that significantly improved usability and engagement" },
+      { Icon: BriefcaseBusiness, value: "Designed a full-stack architecture using React, TypeScript, Node.js, and PostgreSQL for scalability and long-term maintainability" },
+      { Icon: BriefcaseBusiness, value: "Migrated the frontend to Next.js for native SSR, boosting SEO performance and driving a 40% increase in lead generation" },
+      { Icon: BriefcaseBusiness, value: "Containerized the app with Docker, configured Nginx reverse proxy, and built CI/CD pipelines with GitHub Actions for zero-downtime deployments" },
+      { Icon: BriefcaseBusiness, value: "Independently engineered an in-house WhatsApp broadcasting system to scale marketing outreach without third-party CRM costs" },
+      { Icon: BriefcaseBusiness, value: "Operate as sole IT Coordinator: managing enterprise email, hardware diagnostics, and training the operations team on new tools" },
+    ],
+  },
+  {
     title: "Transitioning from IT Assistant to Main Career Path",
     company: "Self-Employed",
     location: "Bangkok",
-    period: "2025 - Present",
+    period: "January 2025 - September 2025",
     type: "work",
     description:
-      "After leaving my IT Assistant role, I refocused on my primary career as a developer. I have been learning new tech stacks, practicing with real-world projects, and strengthening hands-on experience to build production-ready skills.",
+      "After leaving my IT Assistant role, I refocused on my primary career as a developer. I learned new tech stacks, practiced with real-world projects, and strengthened hands-on experience to build production-ready skills.",
     achievements: [
       { Icon: GraduationCap, value: "Learned and applied modern tech stacks such as Vite, TypeScript, Express, WebSocket, Prisma, TailwindCSS, Shadcn/UI, etc." },
-      { Icon: BriefcaseBusiness, value: "Practiced usage of key tools and libraries including Redux Toolkit, Framer Motion, Zod, React Hook Form, React Query, etc." },
+      { Icon: BriefcaseBusiness, value: "Practiced key tools and libraries including Redux Toolkit, Framer Motion, Zod, React Hook Form, React Query, etc." },
       { Icon: GraduationCap, value: "Explored AI-powered development tools, including AI-integrated IDEs and productivity extensions." },
       { Icon: BriefcaseBusiness, value: "Developed real-world projects to gain production-level experience, such as a Social Media Application and a Restaurant Management System." },
     ],
   },
   {
-    title: "Starting a New Career as an IT Assistant in Bangkok",
-    company: "JM505 Computer Sales & Service",
-    location: "Bangkok",
-    period: "2024 - 2025",
+    title: "Starting a New Career as an IT Support & Technical Assistant in Bangkok",
+    company: "JM505 Computer Sales & Services",
+    location: "Bangkok, Thailand",
+    period: "May 2024 - December 2024",
     type: "work",
     description:
-      "When conflict escalated across the country, I relocated to Bangkok. As a junior, securing a permanent web development role was challenging, so I began a new career path as an IT Assistant.",
+      "When conflict escalated across the country, I relocated to Bangkok. As a junior, securing a permanent web development role was challenging, so I began a new career path delivering technical support and hardware maintenance in a computer sales and service environment.",
     achievements: [
-      { Icon: MapPin, value: "Relocated to Bangkok" },
-      { Icon: BriefcaseBusiness, value: "Responsible for sales, software and hardware maintenance, repairs, packaging, and product delivery" },
-      { Icon: BriefcaseBusiness, value: "Improved customer engagement by 25%" },
-      { Icon: BriefcaseBusiness, value: "Digitized product information and improved quality control with real-time updates" },
-      { Icon: BriefcaseBusiness, value: "Optimized product information system and improved response time to customers by 50%" },
+      { Icon: MapPin, value: "Relocated to Bangkok, Thailand" },
+      { Icon: BriefcaseBusiness, value: "Diagnosed and resolved hardware and software issues for customers" },
+      { Icon: BriefcaseBusiness, value: "Performed system repairs, upgrades, and performance optimization" },
+      { Icon: BriefcaseBusiness, value: "Provided technical consultation and after-sales support" },
+      { Icon: BriefcaseBusiness, value: "Supported inventory handling and packaging of computer components and accessories" },
+      { Icon: BriefcaseBusiness, value: "Improved customer engagement by 25% and cut customer response times by 50% through a digitized product information system" },
     ],
   },
   {
     title: "Relocating to Yangon to Begin My Career as a Developer",
     company: "Promes MM",
-    location: "Yangon",
-    period: "2023 - 2024",
+    location: "Yangon, MICT Park",
+    period: "May 2023 - November 2023",
     type: "work",
     description:
-      "Began my professional development career by contributing to scalable web applications using React, TypeScript, and Node.js. Supported project development and gained hands-on industry experience.",
+      "Began my professional development career as a Junior Frontend Developer, building responsive web interfaces and supporting backend integration for web and mobile applications in an agile environment.",
     achievements: [
       { Icon: MapPin, value: "Relocated to Yangon" },
-      { Icon: BriefcaseBusiness, value: "Started career as a Junior Frontend Developer at Promes MM Company" },
+      { Icon: BriefcaseBusiness, value: "Started my career as a Junior Frontend Developer at Promes MM" },
+      { Icon: BriefcaseBusiness, value: "Built responsive dashboards using React.js and Tailwind CSS" },
+      { Icon: BriefcaseBusiness, value: "Integrated RESTful APIs to support mobile and web application features" },
       { Icon: BriefcaseBusiness, value: "Contributed to projects such as Healthcare System, Billing Management, and Real Estate applications" },
-      { Icon: BriefcaseBusiness, value: "Maintained and improved legacy frontend projects, and helped build new projects using React, React Admin, Bootstrap, and related packages" },
+      { Icon: BriefcaseBusiness, value: "Collaborated with designers to deliver clean, accessible UI components and participated in sprint planning, stand-ups, and peer code reviews" },
     ],
   },
   {
@@ -117,32 +138,34 @@ export const activities = [
     ],
   },
   {
-    title: "Professional Web Developer Course",
+    title: "Professional Web Developer Program",
     company: "Fairway Technology",
-    location: "Yangon",
-    period: "2019 - 2020",
+    location: "Yangon, Myanmar",
+    period: "2020 - 2021",
     type: "education",
     description:
-      "When universities shut down due to COVID-19, I relocated to Yangon to focus on web development and enrolled in a professional web development course at a well-known private institute.",
+      "When universities shut down due to COVID-19, I relocated to Yangon and enrolled in an intensive, hands-on program focused on modern web development using the MERN stack and real-world project workflows.",
     achievements: [
       { Icon: MapPin, value: "Relocated to Yangon" },
-      { Icon: GraduationCap, value: "Gained practical knowledge in real-world web development" },
-      { Icon: GraduationCap, value: "Learned industry-relevant tech stack including HTML, CSS, Bootstrap, Node.js, Express, JWT, and MongoDB, and practiced building projects with these technologies" },
+      { Icon: GraduationCap, value: "Developed full-stack projects using React, Node.js, and MongoDB" },
+      { Icon: GraduationCap, value: "Learned modern frontend design and responsive layout techniques" },
+      { Icon: GraduationCap, value: "Practiced industry-relevant tech stack including HTML, CSS, Bootstrap, Node.js, Express, JWT, and MongoDB by building real projects" },
+      { Icon: GraduationCap, value: "Practiced real-world development workflows and deployment fundamentals" },
       { Icon: GraduationCap, value: "Attended English classes to improve speaking and listening skills" },
     ],
   },
   {
-    title: "Computer Science Degree",
+    title: "Bachelor of Computer Science (Undergraduate)",
     company: "University of Computer Studies",
-    location: "Monywa",
+    location: "Monywa, Myanmar",
     period: "2015 - 2019",
     type: "education",
     description:
-      "Bachelor's degree in Computer Science with a focus on software engineering and web technologies.",
+      "Bachelor's degree in Computer Science with an emphasis on software engineering, programming, and database systems.",
     achievements: [
       { Icon: GraduationCap, value: "Gained foundational knowledge of web development languages such as HTML, CSS, and JavaScript." },
-      { Icon: GraduationCap, value: "Studied various programming languages including OOP, C++, C#, and Java." },
-      { Icon: GraduationCap, value: "Acquired knowledge in Database Management Systems, Networking, and Software Engineering." },
+      { Icon: GraduationCap, value: "Learned object-oriented programming and multiple languages including C++, C#, and Java." },
+      { Icon: GraduationCap, value: "Studied Database Management Systems, Networking, Software Engineering, and the Software Development Lifecycle." },
       { Icon: GraduationCap, value: "Completed A+ certification covering practical computer installation, repair, and maintenance." },
     ],
   },
@@ -637,6 +660,42 @@ export const project_2 = [
 
 export const project_3 = [
   {
+    "projectId": "ai-powered-whatsapp-customer-support-system",
+    "coverImage": "/images/projects/ai-powered-whatsapp-chatbot.png",
+    "projectTitle": "AI-Powered WhatsApp Customer Support System",
+    "projectSummary": "An AI-driven WhatsApp support system built for House & Hedges Real Estate to deliver instant, accurate 24/7 replies to prospective clients — orchestrated with n8n, backed by PostgreSQL and Evolution API, and grounded in the company's own policies and knowledge base.",
+    "technologies": ["n8n", "Evolution API", "PostgreSQL", "Docker", "Webhooks", "LLM / AI Integration", "WhatsApp", "VPS Server"],
+    "timeline": [
+      {
+        "phase": "Phase 1: Business Problem & System Design",
+        "title": "Designing 24/7 Instant, Accurate Customer Support for a Real Estate Firm",
+        "description": "House & Hedges Real Estate needed a way to answer prospective clients around the clock with information that was both instant and accurate — even outside office hours. Instead of hiring a night shift or paying for a third-party chatbot subscription, I designed a self-hosted AI support system on top of WhatsApp, the channel our audience already uses. The architecture was intentionally decoupled: n8n for orchestration, PostgreSQL for state and history, Evolution API as the WhatsApp bridge, and a large language model to generate on-brand responses.",
+        "image": null
+      },
+      {
+        "phase": "Phase 2: Local Dockerized Development Environment",
+        "title": "Containerizing n8n, PostgreSQL and Evolution API for Rapid Iteration",
+        "description": "I began development on my local machine by containerizing the entire stack with Docker. n8n hosted the automation flows, PostgreSQL persisted the WhatsApp instances, conversations and chat history, and Evolution API handled the WhatsApp platform integration. Running everything as isolated containers made the setup portable and let me iterate on the automation without touching the host system.",
+        "image": null
+      },
+      {
+        "phase": "Phase 3: Automation Flow, Webhooks & AI Response Generation",
+        "title": "Wiring WhatsApp → Evolution API → n8n → PostgreSQL → LLM → Reply",
+        "description": "After connecting a WhatsApp number to Evolution API, I registered n8n as its webhook target so every incoming message triggered an automation run. Inside n8n the flow logged the message to PostgreSQL, filtered by message type and intent to decide the next action, and assembled a context payload from the ongoing chat history together with the company's terms, policies and property information. That context was sent to an LLM to generate an on-brand reply, which was then dispatched back to the customer through Evolution API's send-message webhook — closing the loop in seconds.",
+        "image": null
+      },
+      {
+        "phase": "Phase 4: Production Deployment on Company VPS",
+        "title": "Migrating to the Company VPS and Scaling to Multiple WhatsApp Numbers",
+        "description": "Once the automation was validated end-to-end locally, I moved the entire Dockerized stack to the company's VPS for 24/7 operation. The final production system supports multiple WhatsApp numbers with a separate interface per number, keeps per-number chat records, and delivers informative, accurate responses grounded in the firm's own knowledge — giving House & Hedges an always-on support channel without recurring per-message SaaS fees.",
+        "image": null
+      }
+    ]
+  }
+]
+
+export const project_4 = [
+  {
     "projectId": "restaurant-management-system",
     "coverImage": "/images/projects/restaurant-dashboard.webp",
     "projectTitle": "Omnichannel Restaurant Management & Real-Time POS Platform",
@@ -670,7 +729,7 @@ export const project_3 = [
   }
 ]
 
-export const project_4 = [
+export const project_5 = [
   {
     "projectId": "social-media-platform",
     "coverImage": "/images/projects/social-media-app.png",

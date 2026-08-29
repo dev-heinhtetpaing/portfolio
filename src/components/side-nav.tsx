@@ -1,5 +1,6 @@
 'use client'
 
+import { useCallback, useEffect, useRef, useState } from "react"
 import { motion } from "motion/react"
 import { usePathname, useRouter } from "next/navigation"
 import {
@@ -32,11 +33,49 @@ const navItems: NavItem[] = [
   { name: "Contact", href: "contact", icon: Mail },
 ]
 
+// How long to stay visible after the user stops scrolling / leaves the nav.
+const HIDE_DELAY_MS = 1500
+
 export function SideNav() {
   const pathname = usePathname()
   const router = useRouter()
   const activeSection = useAppSelector((s) => s.active_section.active)
   const isHome = pathname === "/"
+
+  const [isVisible, setIsVisible] = useState(true)
+  const isHoveredRef = useRef(false)
+  const isFocusedRef = useRef(false)
+  const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const scheduleHide = useCallback(() => {
+    if (hideTimerRef.current) clearTimeout(hideTimerRef.current)
+    hideTimerRef.current = setTimeout(() => {
+      if (!isHoveredRef.current && !isFocusedRef.current) {
+        setIsVisible(false)
+      }
+    }, HIDE_DELAY_MS)
+  }, [])
+
+  const revealAndReschedule = useCallback(() => {
+    setIsVisible(true)
+    scheduleHide()
+  }, [scheduleHide])
+
+  // Auto-hide on scroll idle; reveal on any scroll activity.
+  useEffect(() => {
+    const onScroll = () => revealAndReschedule()
+    scheduleHide()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      if (hideTimerRef.current) clearTimeout(hideTimerRef.current)
+    }
+  }, [scheduleHide, revealAndReschedule])
+
+  // Reveal briefly whenever the route changes so the nav re-announces itself.
+  useEffect(() => {
+    revealAndReschedule()
+  }, [pathname, revealAndReschedule])
 
   const handleClick = (href: string) => {
     if (isHome) {
@@ -50,10 +89,35 @@ export function SideNav() {
   return (
     <motion.aside
       initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.3 }}
-      className="fixed right-2 md:right-4 top-1/2 -translate-y-1/2 z-40"
+      animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 24 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      onMouseEnter={() => {
+        isHoveredRef.current = true
+        if (hideTimerRef.current) clearTimeout(hideTimerRef.current)
+        setIsVisible(true)
+      }}
+      onMouseLeave={() => {
+        isHoveredRef.current = false
+        scheduleHide()
+      }}
+      onFocus={() => {
+        isFocusedRef.current = true
+        if (hideTimerRef.current) clearTimeout(hideTimerRef.current)
+        setIsVisible(true)
+      }}
+      onBlur={(e) => {
+        // Blur bubbles from children; only mark unfocused when focus leaves the aside entirely.
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+          isFocusedRef.current = false
+          scheduleHide()
+        }
+      }}
+      className={cn(
+        "fixed right-2 md:right-4 top-1/2 -translate-y-1/2 z-40",
+        !isVisible && "pointer-events-none"
+      )}
       aria-label="Section navigation"
+      aria-hidden={!isVisible}
     >
       <ul className="flex flex-col gap-1.5 p-1.5 rounded-2xl border border-border bg-background/80 backdrop-blur-md shadow-lg">
         {navItems.map((item) => {
@@ -67,6 +131,7 @@ export function SideNav() {
                 aria-label={item.name}
                 aria-current={active ? "true" : undefined}
                 title={item.name}
+                tabIndex={isVisible ? 0 : -1}
                 className={cn(
                   "group/nav relative flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-xl transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-accent/60",
                   active
@@ -74,7 +139,7 @@ export function SideNav() {
                     : "text-muted-foreground hover:text-accent hover:bg-accent/10"
                 )}
               >
-                <Icon className="w-4 h-4 md:w-[18px] md:h-[18px]" />
+                <Icon className="w-4 h-4 md:w-4.5 md:h-4.5" />
                 <span
                   className={cn(
                     "pointer-events-none absolute right-full mr-2 px-2.5 py-1 rounded-md bg-foreground text-background text-xs font-medium whitespace-nowrap",
